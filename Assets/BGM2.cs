@@ -8,7 +8,7 @@ public class BGM2 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GetComponent<AudioSource> ().volume = 0;
+		GetComponent<AudioSource> ().volume = 0.5f;
 	}
 	
 	// Update is called once per frame
@@ -18,7 +18,7 @@ public class BGM2 : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.tag == "cubetag" || col.gameObject.tag == "groundtag") {
-			GetComponent<AudioSource> ().volume = 0.5f;
+			GetComponent<AudioSource> ().Play();
 		}
 	}
 }
